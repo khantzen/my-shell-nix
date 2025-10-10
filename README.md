@@ -1,4 +1,5 @@
 # my-shell-nix
 
+NixOS: https://nixos.org/
 
-https://search.nixos.org/packages
+Nixpkgs : https://search.nixos.org/packages
