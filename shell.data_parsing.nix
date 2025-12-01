@@ -9,7 +9,7 @@ workTools = with pkgs; [
 ];
 
 shell = pkgs.mkShell {
-  name = "Ansible Project"
+  name = "Simple data parsing";
 
   nativeBuildInputs = [ 
     pkgs.yq
