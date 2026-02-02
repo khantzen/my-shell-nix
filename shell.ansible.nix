@@ -3,7 +3,7 @@ pkgs = import <nixpkgs> {};
 
 pythonEnv = pkgs.python312;
 
-pythonPackages = pythonWorkingEnv.withPackages (pythonPkgs: with pythonPkgs; [
+pythonPackages = pythonEnv.withPackages (pythonPkgs: with pythonPkgs; [
   ansible-core
 ]);
 
@@ -13,11 +13,11 @@ workTools = with pkgs; [
 ];
 
 shell = pkgs.mkShell {
-  name = "Ansible Project"
+  name = "Ansible Project";
 
-  nativeBuildInputs = [ 
-    pythonPackages 
-    workTools 
+  nativeBuildInputs = [
+    pythonPackages
+    workTools
   ];
 
   shellHook = ''
