@@ -18,7 +18,7 @@ shell = pkgs.mkShell {
 
     echo "-- Download kube aliases"
 
-    curl -o ".kube_aliases" https://gist.githubusercontent.com/kha20240826/ce6c1be56af8ebfdd417febd3d216f2f/raw/a3254e3d0da9fb550462cd81d1bcb3710f5979cd/.bash_aliases
+    curl -o ".kube_aliases" https://gist.githubusercontent.com/kha20240826/ce6c1be56af8ebfdd417febd3d216f2f/raw/.bash_aliases
 
     current_path=$(pwd)
 
