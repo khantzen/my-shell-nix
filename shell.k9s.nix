@@ -23,12 +23,17 @@ shell = pkgs.mkShell {
     current_path=$(pwd)
 
     source .kube_aliases
+
+    touch .user_aliases
     source .user_aliases
 
     alias print_kube_aliases="cat $current_path/.kube_aliases && cat $current_path/.user_aliases"
     alias k9s_cheatsheet="firefox https://k9scli.io/topics/commands/"
     
     export KUBECONFIG=$(find ~/.kube/ -maxdepth 1 -type f -printf "%p:" | sed 's/:$//')
+
+    echo "-- Environment initialized, check aliases using \`print_kube_aliases\`"
+    echo "-- Write your aliases in \`./.user_aliases\` file and source them \`source .user_aliases\` or reload nix-shell"
   '';
 };
 
